@@ -8,7 +8,7 @@ class Solution:
         #         cnt += 1
         # return cnt
 
-        # sol 2:
+        # sol 2: Recursive Approach
         cnt = 0
         for i in nums:
             if self.cntDigits(i) % 2 == 0:
