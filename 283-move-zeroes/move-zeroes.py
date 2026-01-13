@@ -12,4 +12,8 @@ class Solution:
                 n -= 1
             else:
                 i += 1
-        
+"""
+Complexity:
+Time : O(n) - Traversal
+Space: O(1)
+"""
