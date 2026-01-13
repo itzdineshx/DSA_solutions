@@ -1,13 +1,13 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        # # Approach 1
+        # Approach 1 - Brute Force
         # r = "".join(c.lower() for c in s if c.isalnum())
         # return r == r[::-1]
-        # """
-        # Complexity:
-        # Time: O(n) - Comprehension
-        # Space: O(n) - cloning
-        # """
+        """
+        Complexity:
+        Time: O(n) - Comprehension
+        Space: O(n) - cloning
+        """
 
         # Approach 2 - Two pointer
         left, right = 0, len(s) - 1
@@ -24,3 +24,8 @@ class Solution:
             left += 1
             right -= 1
         return True
+"""
+Complexity:
+Time: O(n)
+Space: O(1)
+"""
