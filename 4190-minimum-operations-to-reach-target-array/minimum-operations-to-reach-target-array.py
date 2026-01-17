@@ -1,7 +1,8 @@
 class Solution:
     def minOperations(self, nums: List[int], target: List[int]) -> int:
-        l=[]
-        for i in range(len(nums)):
-            if nums[i]!=target[i]:
-                l.append(nums[i])
-        return len(set(l))
+        diff = set()
+        for term1, term2 in zip(nums, target):
+            if term1 != term2:
+                diff.add(term1)
+                
+        return len(diff)
