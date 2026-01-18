@@ -1,5 +1,15 @@
 class Solution:
     def largestMagicSquare(self, grid: List[List[int]]) -> int:
+        """
+        Algorithm:
+        1. Precompute prefix sums for rows, columns, and both diagonals.
+        2. Try square sizes from largest to smallest.
+        3. For each position, check:
+            - All row sums
+            - All column sums
+            - Both diagonal sums
+        4. If all sums are equal -> square size. ow -> 1
+        """
         m, n = len(grid), len(grid[0]) # matrix
 
         # prefix sums of matrix(rows, columns, diagonals)
@@ -41,3 +51,9 @@ class Solution:
                     if is_magic_sq(i, j, k):
                         return k
         return 1
+
+"""
+Complexity:
+Time: O(min(m,n) × m × n)
+Space: O(m × n) - prefix sum tables
+"""
